@@ -1741,7 +1741,7 @@ function pushbutton29_Callback(hObject, eventdata, handles)
 yeardoy=str2num(get(handles.edit_yeardoy,'string'));
 
 lst_path=get(handles.edit_lst,'string');
-[lst, Rsub] = geotiffread(lst_path); % Jiménez?Muñoz et al., 2003; Sobrino et al. 2004, (http://onlinelibrary.wiley.com/doi/10.1029/2003JD003480/full)
+[lst, Rsub] = geotiffread(lst_path); % JimÃ©nez?MuÃ±oz et al., 2003; Sobrino et al. 2004, (http://onlinelibrary.wiley.com/doi/10.1029/2003JD003480/full)
 info_sub = geotiffinfo(lst_path);
 albedo_path=get(handles.edit_albedo,'string');
 albedo = geotiffread(albedo_path);
@@ -2268,7 +2268,7 @@ if saveRn_GeoTIFFS ==1
 end
 
 if saveG_GeoTIFFS ==1
-    geotiffwrite(fullfile(outPath,strcat('G_',int2str(yeardoy),'.tif')),  Rn,Rsub,'GeoKeyDirectoryTag', info_sub.GeoTIFFTags.GeoKeyDirectoryTag);
+    geotiffwrite(fullfile(outPath,strcat('G_',int2str(yeardoy),'.tif')),  G,Rsub,'GeoKeyDirectoryTag', info_sub.GeoTIFFTags.GeoKeyDirectoryTag);
 end
 
 
